@@ -34,7 +34,7 @@ func _process(delta):
 	for i in Arraybodies.size() :
 		body = Arraybodies[i];
 		if body.is_in_group("enemy") :
-			body.position = body.position + moviment
+			body.move_and_collide(moviment)
 			
 		
 			
