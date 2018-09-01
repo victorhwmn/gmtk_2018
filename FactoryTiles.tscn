@@ -1,20 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://dungeon.png" type="Texture" id=1]
+[ext_resource path="res://TILESET_SPRITE.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="FactoryTiles" type="Node"]
+[node name="FactoryTiles" type="Node" index="0"]
 
 [node name="0" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 64, 64 )
+region_rect = Rect2( 0, 64, 64, 64 )
 _sections_unfolded = [ "Animation", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -36,349 +36,13 @@ position = Vector2( 32, 32 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="2" type="Sprite" parent="." index="1"]
+[node name="1" type="Sprite" parent="." index="1"]
 
 position = Vector2( 128, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 64, 0, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="2" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="3" type="Sprite" parent="." index="2"]
-
-position = Vector2( 256, 0 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 128, 0, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="3" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="3/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="4" type="Sprite" parent="." index="3"]
-
-position = Vector2( 256, 128 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 128, 64, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="4" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="4/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="5" type="Sprite" parent="." index="4"]
-
-position = Vector2( 256, 256 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 128, 128, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="5" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="5/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="6" type="Sprite" parent="." index="5"]
-
-position = Vector2( 128, 256 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 64, 128, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="6" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="6/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="7" type="Sprite" parent="." index="6"]
-
-position = Vector2( 0, 256 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 128, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="7" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="7/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="8" type="Sprite" parent="." index="7"]
-
-position = Vector2( 0, 128 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 64, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="8" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="8/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="9" type="Sprite" parent="." index="8"]
-
-position = Vector2( 128, 128 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 64, 64, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="9" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="9/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="11" type="Sprite" parent="." index="9"]
-
-position = Vector2( 0, 384 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 192, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="11" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="11/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="12" type="Sprite" parent="." index="10"]
-
-position = Vector2( 128, 384 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 64, 192, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="12" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="12/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="13" type="Sprite" parent="." index="11"]
-
-position = Vector2( 128, 512 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 64, 256, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="13" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="13/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="14" type="Sprite" parent="." index="12"]
-
-position = Vector2( 0, 512 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 256, 64, 64 )
-_sections_unfolded = [ "Animation", "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="14" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="14/StaticBody2D" index="0"]
-
-position = Vector2( 32, 32 )
-shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="1" type="Sprite" parent="." index="13"]
-
-position = Vector2( 256, 384 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 256, 0, 64, 64 )
+region_rect = Rect2( 0, 0, 64, 64 )
 _sections_unfolded = [ "Animation", "Region" ]
 __meta__ = {
 "_edit_group_": true
@@ -401,13 +65,13 @@ build_mode = 0
 polygon = PoolVector2Array( -32, -32, 32, -32, 32, 0, -32, 0, -32, -32 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="10" type="Sprite" parent="." index="14"]
+[node name="2" type="Sprite" parent="." index="2"]
 
-position = Vector2( 256, 512 )
+position = Vector2( 0, 128 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 192, 128, 64, 64 )
+region_rect = Rect2( 64, 0, 64, 64 )
 _sections_unfolded = [ "Offset", "Region" ]
 
 
