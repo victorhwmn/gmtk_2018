@@ -2,12 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/inimigoEsquerda.png-4f5c962ef52496aeea712165d14a1093.stex"
+path="res://.import/inimigo-45.png-8b1f12fe3c2ac2a2a2533986e62fe4bb.stex"
 
 [deps]
 
-source_file="res://inimigoEsquerda.png"
-dest_files=[ "res://.import/inimigoEsquerda.png-4f5c962ef52496aeea712165d14a1093.stex" ]
+source_file="res://inimigo-45.png"
+source_md5="45a3e79bfecb436521ea52f20e58c95b"
+
+dest_files=[ "res://.import/inimigo-45.png-8b1f12fe3c2ac2a2a2533986e62fe4bb.stex" ]
+dest_md5="1e3609a1e55af8f18f2d3fa2f3e9ac9c"
 
 [params]
 
