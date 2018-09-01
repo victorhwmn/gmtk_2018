@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="gmtk_2018"
-run/main_scene="res://MainGame.tscn"
+run/main_scene="res://Scene.tscn"
 config/icon="res://icon.png"
 
 [rendering]
