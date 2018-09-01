@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Esteira.gd" type="Script" id=1]
+[ext_resource path="res://esteira1.png" type="Texture" id=2]
+[ext_resource path="res://esteira0.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.4829, 9.69833 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Esteira" type="Area2D" index="0"]
+
+position = Vector2( 0, 3.52101 )
+input_pickable = true
+gravity_vec = Vector2( 20, 0 )
+gravity = 1000.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+type = "Left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( -1.57523, -0.941548 )
+scale = Vector2( 3.15731, 1.90675 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 17.3336, -0.715882 )
+scale = Vector2( 0.164681, 0.146136 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( -24.0382, -0.714 )
+scale = Vector2( 0.164681, 0.14615 )
+frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+
