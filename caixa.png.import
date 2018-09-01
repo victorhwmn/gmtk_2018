@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gum.png-05942d98a1224d042561104237a88531.stex"
+path="res://.import/caixa.png-1e662fbb2adf9c7806dd7ecb95fc52cf.stex"
 
 [deps]
 
-source_file="res://gum.png"
-source_md5="7481cf4932aa545f279088b312d06a85"
+source_file="res://caixa.png"
+source_md5="402f7a7c2e8d30677111d35c9b26d838"
 
-dest_files=[ "res://.import/gum.png-05942d98a1224d042561104237a88531.stex" ]
-dest_md5="1912ac649679680bdcf481e4d00fc17b"
+dest_files=[ "res://.import/caixa.png-1e662fbb2adf9c7806dd7ecb95fc52cf.stex" ]
+dest_md5="6afd35d497db39e4d8a3cbb8aba601e6"
 
 [params]
 

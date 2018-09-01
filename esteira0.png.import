@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gum.png-05942d98a1224d042561104237a88531.stex"
+path="res://.import/esteira0.png-45135c372e0aa65015a3eeab6ea01669.stex"
 
 [deps]
 
-source_file="res://gum.png"
-source_md5="7481cf4932aa545f279088b312d06a85"
+source_file="res://esteira0.png"
+source_md5="ac5bdbbb464102adaa007e03f30aec09"
 
-dest_files=[ "res://.import/gum.png-05942d98a1224d042561104237a88531.stex" ]
-dest_md5="1912ac649679680bdcf481e4d00fc17b"
+dest_files=[ "res://.import/esteira0.png-45135c372e0aa65015a3eeab6ea01669.stex" ]
+dest_md5="5b56aaddf50cb189b7ebddbe3a9e2bfe"
 
 [params]
 
