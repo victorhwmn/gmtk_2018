@@ -1,11 +1,10 @@
 extends KinematicBody2D
 
+var Bullet = preload("res://Bullet.tscn")
+
 var motion = Vector2()
-var shoot_dir = Vector2()
 var y_dir
 var x_dir
-var y_shoot_dir = 0
-var x_shoot_dir = 0
 export var SPEED = 300
 
 func _ready():
@@ -35,15 +34,14 @@ func _physics_process(delta):
 	
 	# Shoot
 	if(Input.is_action_just_pressed("ui_select")):
-		print("BANG!")
-		shoot_dir = self.position - get_viewport().get_mouse_position()
-		shoot_dir.x *= -1
-		shoot_dir.y *= -1
-		print(shoot_dir)
+		var shoot_dir = -(position - get_global_mouse_position()).normalized()
+		
+		var bullet = Bullet.instance()
+		bullet.position = position + get_node("Sprite").texture.get_size()/2 * shoot_dir
+		bullet.init(shoot_dir)
+		get_parent().add_child(bullet)
 	
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	pass
