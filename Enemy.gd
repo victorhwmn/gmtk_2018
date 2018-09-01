@@ -1,59 +1,65 @@
-extends KinematicBody2D
+extends "Shooter.gd"
 
-#Recebe Node do Player para pegar a posição dele
-#var player = get_node("/root/MainGame/Player");
-var shot_timer = 3;
-var timer = null;
-var can_shot = false;
+var turn_delay = 2
+var shot_delay = 2
+var turn_timer = null
+var shot_timer = null
 var Bullet = preload("res://Bullet.tscn")
-onready var acha_player = get_node("Detectar_jogador");
-onready var player = get_node("../Player")
+var BulletPreview = preload("res://BulletPreview.tscn")
+var last_preview = null
+var player_in_range = false
 
+onready var detector = get_node("PlayerDetector");
+onready var players = get_tree().get_nodes_in_group("players")
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	timer = Timer.new()
-	timer.set_wait_time(shot_timer);
-	timer.connect("timeout",self,"_can_shot")
-	timer.set_one_shot(true);
-	add_child(timer);
-	timer.start()
-
+	turn_timer = Timer.new()
+	turn_timer.set_wait_time(turn_delay);
+	turn_timer.connect("timeout", self, "turn")
+	add_child(turn_timer);
+	turn_timer.start()
+	var shot_lag = Timer.new()
+	shot_lag.set_wait_time(1);
+	shot_lag.set_one_shot(true)
+	shot_lag.connect("timeout", self, "set_shot_timer")
+	add_child(shot_lag);
+	shot_lag.start()
 	pass
 
-func _process(delta):
-	
-	
-	if acha_player.overlaps_body(player) :
-		#print(can_shot);
-		var direcao = player.position
-		if can_shot == true :
-			can_shot = false;
-			_shot(direcao)
-			timer.start();
-			print(direcao);
-			#Cria uma bala na direção do Player
-	
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-
+func _physics_process(delta):
+	player_in_range = false
+	for player in players:
+		if(detector.overlaps_body(player)):
+			player_in_range = true
 	pass
-func _shot(direcao) :
-	var shoot_dir = -(position - direcao).normalized()
-		
-	var bullet = Bullet.instance()
-	bullet.position = position + get_node("Sprite").texture.get_size()/2 * shoot_dir
-	bullet.init(shoot_dir)
-	get_parent().add_child(bullet)
-
-
-
-func _can_shot():
-	can_shot = true;
-
-func hit():
-	queue_free()
 	
-	
-	
+func turn():
+	if last_preview and last_preview.get_ref():
+		last_preview.get_ref().queue_free()
+	rotate(PI/4)
+	pass
+
+func set_shot_timer():
+	shot_timer = Timer.new()
+	shot_timer.set_wait_time(shot_delay);
+	shot_timer.connect("timeout", self, "shot_preview")
+	add_child(shot_timer);
+	shot_timer.start()
+	pass
+
+func shot_preview():
+	if player_in_range:
+		var bullet_preview = .shoot(BulletPreview, Vector2(0, 1).rotated(get_global_transform().get_rotation()))
+		bullet_preview.shooter = self
+		last_preview = weakref(bullet_preview)
+	pass
+
+func playerHit():
+	.shoot(Bullet, Vector2(0, 1).rotated(get_global_transform().get_rotation()))
+	pass
+
+func hit(damage):
+	print(name, " took ", damage, " damage!")
+
+
+
