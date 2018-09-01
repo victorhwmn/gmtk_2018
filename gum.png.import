@@ -7,7 +7,10 @@ path="res://.import/gum.png-05942d98a1224d042561104237a88531.stex"
 [deps]
 
 source_file="res://gum.png"
+source_md5="02cf2193ee448224821ef081d65b7863"
+
 dest_files=[ "res://.import/gum.png-05942d98a1224d042561104237a88531.stex" ]
+dest_md5="ad5d982e83b8cff4cdcc8d9c894a9462"
 
 [params]
 
