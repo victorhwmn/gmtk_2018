@@ -14,26 +14,28 @@ height = 34.3991
 custom_solver_bias = 0.0
 radius = 23.0631
 
-[node name="Enemy" type="KinematicBody2D" index="0"]
+[node name="Enemy" type="KinematicBody2D" index="0" groups=[
+"damageable",
+]]
 
 position = Vector2( -1.10803, 1.10803 )
 input_pickable = false
 collision_layer = 1
-collision_mask = 1
+collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Material", "Visibility", "collision" ]
 
-[node name="Colision_box" type="CollisionShape2D" parent="." index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( 1.20738, -4.32284 )
 scale = Vector2( 1.2785, 0.893548 )
 shape = SubResource( 1 )
 
-[node name="Detectar_jogador" type="Area2D" parent="." index="1"]
+[node name="PlayerDetector" type="Area2D" parent="." index="1"]
 
 rotation = -3.14159
-scale = Vector2( 16.6823, -24.1403 )
+scale = Vector2( 16, 16 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -43,9 +45,8 @@ audio_bus_override = false
 audio_bus_name = "Master"
 _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detectar_jogador" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" index="0"]
 
-scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
