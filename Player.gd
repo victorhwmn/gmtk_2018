@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends "Shooter.gd"
 
 var Bullet = preload("res://Bullet.tscn")
 
@@ -34,14 +34,14 @@ func _physics_process(delta):
 	
 	# Shoot
 	if(Input.is_action_just_pressed("ui_select")):
-		var shoot_dir = -(position - get_global_mouse_position()).normalized()
-		
-		var bullet = Bullet.instance()
-		bullet.position = position + get_node("Sprite").texture.get_size()/2 * shoot_dir
-		bullet.init(shoot_dir)
-		get_parent().add_child(bullet)
-	
+		var direction = -(position - get_global_mouse_position()).normalized()
+		.shoot(Bullet, direction)
+
 	pass
 
 func _process(delta):
+	pass
+	
+func hit(damage):
+	print(self.name, " took ", damage, " damage")
 	pass
