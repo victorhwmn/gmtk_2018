@@ -7,10 +7,7 @@ path="res://.import/dungeonTILES_UTILIZADOS.png-7868d5fd09a3a789f89ce1d6ba9a0a13
 [deps]
 
 source_file="res://dungeonTILES_UTILIZADOS.png"
-source_md5="f1a1ad010aacbc881586cfa08ce87f1b"
-
 dest_files=[ "res://.import/dungeonTILES_UTILIZADOS.png-7868d5fd09a3a789f89ce1d6ba9a0a13.stex" ]
-dest_md5="4829f0a8324ea6b24e7c0742315e99f5"
 
 [params]
 

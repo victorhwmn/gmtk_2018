@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caixa.png-1e662fbb2adf9c7806dd7ecb95fc52cf.stex"
+path="res://.import/inimigo45.png-0947084f102fd487cf81eb96ccc97f8e.stex"
 
 [deps]
 
-source_file="res://caixa.png"
-dest_files=[ "res://.import/caixa.png-1e662fbb2adf9c7806dd7ecb95fc52cf.stex" ]
+source_file="res://inimigo45.png"
+dest_files=[ "res://.import/inimigo45.png-0947084f102fd487cf81eb96ccc97f8e.stex" ]
 
 [params]
 

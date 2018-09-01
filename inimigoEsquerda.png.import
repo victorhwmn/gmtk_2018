@@ -2,15 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RTS_Crate.png-bd78e6bb9addf4f495a7defe5942ec7f.stex"
+path="res://.import/inimigoEsquerda.png-4f5c962ef52496aeea712165d14a1093.stex"
 
 [deps]
 
-source_file="res://RTS_Crate.png"
-source_md5="e11ba3abfe7c0f81b6f63cca050ba20a"
-
-dest_files=[ "res://.import/RTS_Crate.png-bd78e6bb9addf4f495a7defe5942ec7f.stex" ]
-dest_md5="5676dceec0728d821edefdaeb50b3de5"
+source_file="res://inimigoEsquerda.png"
+dest_files=[ "res://.import/inimigoEsquerda.png-4f5c962ef52496aeea712165d14a1093.stex" ]
 
 [params]
 

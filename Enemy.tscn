@@ -1,41 +1,97 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigo45.png" type="Texture" id=2]
+[ext_resource path="res://inimigoDireita.png" type="Texture" id=3]
+[ext_resource path="res://inimigoCostas.png" type="Texture" id=4]
+[ext_resource path="res://inimigoEsquerda.png" type="Texture" id=5]
+[ext_resource path="res://inimigo-45.png" type="Texture" id=6]
+[ext_resource path="res://inimigoFrente.png" type="Texture" id=7]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "7_front_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "6_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "3_back_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "2_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "5_back_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "4_back",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "1_front_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "0_front",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
 
 custom_solver_bias = 0.0
 radius = 10.0
-height = 34.3991
 
 [sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 23.0631
 
-[node name="Enemy" type="KinematicBody2D" index="0" groups=[
+[node name="Enemy" type="KinematicBody2D" groups=[
 "damageable",
 ]]
 
 position = Vector2( -1.10803, 1.10803 )
+scale = Vector2( 0.25, 0.25 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Material", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
-position = Vector2( 1.20738, -4.32284 )
-scale = Vector2( 1.2785, 0.893548 )
-shape = SubResource( 1 )
+position = Vector2( 2.31558, -1.15562 )
+frames = SubResource( 3 )
+animation = "0_front"
 
-[node name="PlayerDetector" type="Area2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-rotation = -3.14159
-scale = Vector2( 16, 16 )
+position = Vector2( 4, 22 )
+scale = Vector2( 8, 6 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PlayerDetector" type="Area2D" parent="." index="2"]
+
+visible = false
+scale = Vector2( 64, 64 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -47,12 +103,8 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" index="0"]
 
+visible = false
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
-
-[node name="Sprite" type="Sprite" parent="." index="2"]
-
-position = Vector2( 2.31558, -1.15562 )
-texture = ExtResource( 2 )
 
 

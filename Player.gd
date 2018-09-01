@@ -30,7 +30,7 @@ func _physics_process(delta):
 	motion.x = x_dir * SPEED
 	motion.y = y_dir * SPEED
 	
-	motion = move_and_slide(motion, Vector2(0, 0))
+	move_and_collide(motion * delta)
 	
 	# Shoot
 	if(Input.is_action_just_pressed("ui_select")):
