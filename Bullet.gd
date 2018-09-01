@@ -8,13 +8,13 @@ var damage
 func _ready():
 	pass
 	
-func init(direction, speed, size = 0.1, damage = 1):
+func init(direction, speed, size = 0.1, damage = 10):
 	if speed == null:
 		speed = 1000
 	if size == null:
 		size = 0.1
 	if damage == null:
-		damage = 1
+		damage = 10
 	self.direction = direction * speed
 	self.speed = speed
 	self.size = size
