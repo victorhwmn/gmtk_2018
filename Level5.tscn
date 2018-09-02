@@ -38,7 +38,7 @@ __meta__ = {
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 96, 672 )
+position = Vector2( 100, 710 )
 
 [node name="Box" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -90,6 +90,7 @@ LOOT = ExtResource( 4 )
 position = Vector2( 128, -960 )
 scale = Vector2( 4, 1 )
 _sections_unfolded = [ "Transform" ]
+next_scene = "res://Level1.tscn"
 
 [node name="eNFEITES" type="Node" parent="." index="14"]
 

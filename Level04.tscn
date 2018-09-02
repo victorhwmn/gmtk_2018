@@ -193,6 +193,7 @@ type = "Vertical"
 
 position = Vector2( 1839.98, 575.575 )
 scale = Vector2( 0.99523, 2.11462 )
+next_scene = "res://Completed.tscn"
 
 [node name="Box" parent="." index="17" instance=ExtResource( 9 )]
 
