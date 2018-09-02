@@ -1,13 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Esteira.gd" type="Script" id=1]
 [ext_resource path="res://esteira1.png" type="Texture" id=2]
 [ext_resource path="res://esteira0.png" type="Texture" id=3]
+[ext_resource path="res://esteira2.png" type="Texture" id=4]
+[ext_resource path="res://esteira3.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.4829, 9.69833 )
+extents = Vector2( 12.4829, 11.7823 )
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -18,7 +20,17 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Esteira" type="Area2D" index="0"]
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[node name="Esteira" type="Area2D"]
 
 position = Vector2( 0.115448, 3.52101 )
 scale = Vector2( 0.633059, 1 )
@@ -31,36 +43,53 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
-type = "Left"
+direcao = "Up"
+type = "Marrom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( -1.25491, -0.941548 )
-scale = Vector2( 4.9441, 1.90675 )
+position = Vector2( 0.112717, -3.46844 )
+scale = Vector2( 5.03243, 1.7082 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
-position = Vector2( 29.8135, -0.715882 )
-scale = Vector2( 0.26218, 0.146136 )
+visible = false
+position = Vector2( 29.8135, -3.39088 )
+scale = Vector2( 0.26218, 0.157649 )
 frames = SubResource( 2 )
 animation = "default"
-frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="2"]
 
-position = Vector2( -33.1658, -0.714 )
-scale = Vector2( 0.23599, 0.14615 )
+visible = false
+position = Vector2( -32.0145, -3.47392 )
+scale = Vector2( 0.239336, 0.157001 )
 frames = SubResource( 2 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="." index="3"]
+
+visible = false
+position = Vector2( 31.5305, -3.3371 )
+scale = Vector2( 0.247415, 0.157265 )
+frames = SubResource( 3 )
 animation = "default"
 frame = 1
 playing = true
-_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="4"]
+
+visible = false
+position = Vector2( -31.4223, -3.36736 )
+scale = Vector2( 0.244794, 0.157502 )
+frames = SubResource( 3 )
+animation = "default"
+playing = true
 
 

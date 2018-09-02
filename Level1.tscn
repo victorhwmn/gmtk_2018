@@ -30,41 +30,44 @@ tile_data = PoolIntArray( -983041, 0, 0, -1048576, 0, 0, -1048575, 0, 0, -104857
 
 [node name="Esteira" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 765, -700 )
+position = Vector2( 765, -695 )
 scale = Vector2( 7.03125, 3.125 )
+direcao = "Left"
+type = "Rosa"
 
 [node name="Esteira2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 590, -290 )
+position = Vector2( 590, -277 )
 scale = Vector2( 4.80469, 2.03125 )
+direcao = "Left"
 
 [node name="Esteira6" parent="." index="3" instance=ExtResource( 2 )]
 
-position = Vector2( 517.5, 550 )
+position = Vector2( 509.5, 542 )
 rotation = 3.14159
 scale = Vector2( 6.01563, 1.75421 )
-type = "LR"
+direcao = "LR"
+type = "Rosa"
 
 [node name="Esteira5" parent="." index="4" instance=ExtResource( 2 )]
 
-position = Vector2( 291.946, -110.856 )
+position = Vector2( 305.946, -110.856 )
 rotation = 4.71239
 scale = Vector2( 3.40668, 2.03125 )
-type = "Down"
+direcao = "Down"
 
 [node name="Esteira3" parent="." index="5" instance=ExtResource( 2 )]
 
 position = Vector2( 560.788, 89.8179 )
 rotation = 3.14159
 scale = Vector2( 4.84322, 2.03125 )
-type = "Right"
+direcao = "Right"
 
 [node name="Esteira4" parent="." index="6" instance=ExtResource( 2 )]
 
-position = Vector2( 859.965, -76.6404 )
+position = Vector2( 841.965, -67.3516 )
 rotation = 1.5708
-scale = Vector2( 3.22521, 2.03125 )
-type = "Up"
+scale = Vector2( 3.24744, 2.03125 )
 
 [node name="Player" parent="." index="7" instance=ExtResource( 3 )]
 

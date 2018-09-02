@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Box.tscn" type="PackedScene" id=1]
-[ext_resource path="res://balas.png" type="Texture" id=2]
+[ext_resource path="res://gelo.png" type="Texture" id=2]
+[ext_resource path="res://balas.png" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -11,11 +12,19 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 0, 0 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="gelo" type="Sprite" parent="." index="1"]
 
-position = Vector2( 0, -9 )
+visible = false
+position = Vector2( 0.747522, -8.8753 )
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 2 )
+
+[node name="Bala" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 0, -9 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 

@@ -4,29 +4,37 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 var Arraybodies;
-export (String, "Up", "Left", "Right","Down","LR") var type = "Up";
+export (String, "Up", "Left", "Right","Down","LR") var direcao = "Up";
+export (String, "Rosa","Marrom") var type = "Rosa";
 var moviment = Vector2(0,0);
 var flag = 2;
 
 
 func _ready():
 	
-	if type == "LR":	
+	if direcao == "LR":	
 		var timer = Timer.new();
 		timer.set_wait_time(5)	
 		timer.connect("timeout", self, "_timeout")
 		add_child(timer)
 		timer.start()
+		
+	match type :
+		"Rosa":
+			get_child(3).show()
+			get_child(4).show()
+		"Marrom":
+			get_child(1).show()
+			get_child(2).show()
+	pass	
 
-
-	pass
 
 func _process(delta):
 	var i;
 	var body;
 	
 	Arraybodies = get_overlapping_bodies();
-	match type :
+	match direcao :
 		"Up":
 			moviment = Vector2(0,-2);
 		"Left":
