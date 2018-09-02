@@ -114,7 +114,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="AmmoContainer" parent="." index="3" instance=ExtResource( 8 )]
 
-visible = false
 position = Vector2( 0, 7.99998 )
 scale = Vector2( 6, 6 )
 _sections_unfolded = [ "Collision", "Transform" ]
