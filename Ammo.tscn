@@ -8,24 +8,38 @@
 custom_solver_bias = 0.0
 radius = 10.0
 
-[node name="Ammo" type="KinematicBody2D"]
+[node name="Ammo" type="RigidBody2D"]
 
 input_pickable = false
 collision_layer = 4
 collision_mask = 4
-collision/safe_margin = 0.08
+mode = 0
+mass = 1000.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-visible = false
+scale = Vector2( 0.998446, 0.998446 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="CollisionShape2D" index="0"]
 
-scale = Vector2( 0.078125, 0.078125 )
+scale = Vector2( 0.0782466, 0.0782466 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 

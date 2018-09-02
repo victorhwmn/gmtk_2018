@@ -5,10 +5,10 @@ export(String,"Vertical","Horizontal") var  type = "Horizontal"
 func _ready():
 	
 	if type == "Horizontal" :
-		get_child(0).set_disabled(true);
+		get_child(1).set_disabled(true);
 		get_child(2).show();
 	else:
-		get_child(1).set_disabled(true);
+		get_child(0).set_disabled(true);
 		get_child(3).show();
 
 func _process(delta):
@@ -23,8 +23,8 @@ func _process(delta):
 
 func unlock():
 	if type == "Horizontal" :
-		get_child(1).set_disabled(true);
+		get_child(0).set_disabled(true);
 		get_child(2).hide();
 	else:
-		get_child(0).set_disabled(true);
+		get_child(1).set_disabled(true);
 		get_child(3).hide();

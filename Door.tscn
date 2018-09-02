@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 36.3334, 32 )
 
-[node name="Door" type="StaticBody2D" index="0"]
+[node name="Door" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -25,14 +25,12 @@ type = "Horizontal"
 
 scale = Vector2( 1.76147, 1 )
 shape = SubResource( 1 )
-disabled = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="boxH2" type="CollisionShape2D" parent="." index="1"]
 
 scale = Vector2( 0.880733, 1.82857 )
 shape = SubResource( 1 )
-disabled = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="portaH" type="Sprite" parent="." index="2"]
