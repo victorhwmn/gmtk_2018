@@ -115,6 +115,11 @@ func _physics_process(delta):
 	
 	pass
 
+func _input(event):
+		if event.is_action_pressed("ui_restart"):
+			int boy
+	pass
+
 func enable_shoot():
 	can_shoot = true
 	pass
