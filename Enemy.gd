@@ -10,7 +10,9 @@ var Ammo = preload("res://Ammo.tscn")
 var Candy = preload("res://Candy.tscn")
 var last_preview = null
 var player_in_range = false
-var aim_rotation = 0
+
+export var AIM_ROTATION = 0
+export var AUTO_TURN = true
 
 var ammo_count = 20
 var ammo = []
@@ -31,11 +33,12 @@ var animations = [
 	]
 
 func _ready():
-	turn_timer = Timer.new()
-	turn_timer.set_wait_time(turn_delay)
-	turn_timer.connect("timeout", self, "turn")
-	add_child(turn_timer);
-	turn_timer.start()
+	if(AUTO_TURN):
+		turn_timer = Timer.new()
+		turn_timer.set_wait_time(turn_delay)
+		turn_timer.connect("timeout", self, "turn")
+		add_child(turn_timer);
+		turn_timer.start()
 	var shot_lag = Timer.new()
 	shot_lag.set_wait_time(1)
 	shot_lag.set_one_shot(true)
@@ -64,12 +67,12 @@ func turn():
 	if last_preview and last_preview.get_ref():
 		last_preview.get_ref().queue_free()
 		
-	aim_rotation+= 1
+	AIM_ROTATION+= 1
 	
-	if(aim_rotation > 7):
-		aim_rotation = 0
+	if(AIM_ROTATION > 7):
+		AIM_ROTATION = 0
 		
-	AnimatedSprite.play(animations[aim_rotation])
+	AnimatedSprite.play(animations[AIM_ROTATION])
 
 func set_shot_timer():
 	shot_timer = Timer.new()
@@ -81,14 +84,14 @@ func set_shot_timer():
 
 func shot_preview():
 	if player_in_range and len(ammo) > 0:
-		var bullet_preview = .shoot(BulletPreview, Vector2(0, 1).rotated(aim_rotation*PI/4))
+		var bullet_preview = .shoot(BulletPreview, Vector2(0, 1).rotated(AIM_ROTATION*PI/4))
 		bullet_preview.shooter = self
 		last_preview = weakref(bullet_preview)
 	pass
 
 func playerHit():
 	var next_ammo = ammo[0]
-	var bullet = .shoot(Bullet, Vector2(0, 1).rotated(aim_rotation*PI/4))
+	var bullet = .shoot(Bullet, Vector2(0, 1).rotated(AIM_ROTATION*PI/4))
 	bullet.set_modulate(ammo[0].get_modulate())
 	ammo[0].queue_free()
 	ammo.erase(ammo[0])

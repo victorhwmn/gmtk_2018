@@ -150,6 +150,7 @@ position = Vector2( 170, 550 )
 
 position = Vector2( 570, 610 )
 scale = Vector2( 1.90625, 1 )
+type = "Horizontal"
 
 [node name="Transition" parent="." index="22" instance=ExtResource( 7 )]
 
