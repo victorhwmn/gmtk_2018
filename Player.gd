@@ -157,4 +157,5 @@ func hit(damage):
 	is_dead = true
 	visible = false
 	$sfx/dead.play()
+	StageManager.restart()
 	pass

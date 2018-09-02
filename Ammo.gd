@@ -11,10 +11,3 @@ func _ready():
 
 func _process(delta):
 	pass
-	
-func collected(collector):
-	if collector.is_in_group("players"):
-		if collector.ammo_count < 6:
-			collector.ammo_count+= 1
-		queue_free()
-	pass
