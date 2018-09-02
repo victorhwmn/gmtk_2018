@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.4829, 11.7823 )
+extents = Vector2( 12.4829, 12.0946 )
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -32,7 +32,6 @@ _sections_unfolded = [ "Resource" ]
 
 [node name="Esteira" type="Area2D"]
 
-position = Vector2( 0.115448, 3.52101 )
 scale = Vector2( 0.633059, 1 )
 input_pickable = true
 gravity_vec = Vector2( 20, 0 )
@@ -45,39 +44,42 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform" ]
 direcao = "Up"
 type = "Marrom"
+wait_time = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0.112717, -3.46844 )
-scale = Vector2( 5.03243, 1.7082 )
+position = Vector2( 0.112717, -0.0940284 )
+scale = Vector2( 5.03243, 1.66665 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 visible = false
-position = Vector2( 29.8135, -3.39088 )
-scale = Vector2( 0.26218, 0.157649 )
+position = Vector2( 29.8135, 0.0401744 )
+scale = Vector2( 0.26218, 0.156436 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="2"]
 
 visible = false
-position = Vector2( -32.0145, -3.47392 )
-scale = Vector2( 0.239336, 0.157001 )
+position = Vector2( -32.0145, -0.00177908 )
+scale = Vector2( 0.239336, 0.156178 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="." index="3"]
 
 visible = false
-position = Vector2( 31.5305, -3.3371 )
-scale = Vector2( 0.247415, 0.157265 )
+position = Vector2( 30.0283, -0.0347842 )
+scale = Vector2( 0.259151, 0.156471 )
 frames = SubResource( 3 )
 animation = "default"
 frame = 1
@@ -86,10 +88,11 @@ playing = true
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="4"]
 
 visible = false
-position = Vector2( -31.4223, -3.36736 )
-scale = Vector2( 0.244794, 0.157502 )
+position = Vector2( -32.2212, 0.0379329 )
+scale = Vector2( 0.238553, 0.156488 )
 frames = SubResource( 3 )
 animation = "default"
+frame = 1
 playing = true
 
 

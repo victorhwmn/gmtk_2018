@@ -37,8 +37,8 @@ type = "Rosa"
 
 [node name="Esteira2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 590, -277 )
-scale = Vector2( 4.80469, 2.03125 )
+position = Vector2( 595, -277 )
+scale = Vector2( 4.53125, 2.03125 )
 direcao = "Left"
 
 [node name="Esteira6" parent="." index="3" instance=ExtResource( 2 )]
@@ -51,85 +51,91 @@ type = "Rosa"
 
 [node name="Esteira5" parent="." index="4" instance=ExtResource( 2 )]
 
-position = Vector2( 305.946, -110.856 )
+position = Vector2( 305.946, -118.536 )
 rotation = 4.71239
-scale = Vector2( 3.40668, 2.03125 )
+scale = Vector2( 3.17954, 2.03125 )
 direcao = "Down"
 
 [node name="Esteira3" parent="." index="5" instance=ExtResource( 2 )]
 
-position = Vector2( 560.788, 89.8179 )
+position = Vector2( 549.386, 89.8179 )
 rotation = 3.14159
-scale = Vector2( 4.84322, 2.03125 )
+scale = Vector2( 4.51915, 2.03125 )
 direcao = "Right"
 
 [node name="Esteira4" parent="." index="6" instance=ExtResource( 2 )]
 
-position = Vector2( 841.965, -67.3516 )
+position = Vector2( 841.965, -70.1737 )
 rotation = 1.5708
-scale = Vector2( 3.24744, 2.03125 )
+scale = Vector2( 3.15925, 2.03125 )
 
 [node name="Player" parent="." index="7" instance=ExtResource( 3 )]
 
 position = Vector2( 1140, -970 )
 
-[node name="Enemy" parent="." index="8" instance=ExtResource( 4 )]
+[node name="Control_enemy" type="Node2D" parent="." index="8"]
+
+[node name="Enemy" parent="Control_enemy" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( 340, 100 )
 
-[node name="Enemy3" parent="." index="9" instance=ExtResource( 4 )]
+[node name="Enemy4" parent="Control_enemy" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 580, -270 )
+
+[node name="Enemy3" parent="Control_enemy" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 350, 540 )
 
-[node name="Enemy2" parent="." index="10" instance=ExtResource( 4 )]
+[node name="Enemy2" parent="Control_enemy" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 100, -490 )
 
-[node name="Box" parent="." index="11" instance=ExtResource( 5 )]
+[node name="Box" parent="." index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 550, -100 )
 
-[node name="Box9" parent="." index="12" instance=ExtResource( 5 )]
+[node name="Box9" parent="." index="10" instance=ExtResource( 5 )]
 
 position = Vector2( 550, -100 )
 
-[node name="Box2" parent="." index="13" instance=ExtResource( 5 )]
+[node name="Box2" parent="." index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 620, -100 )
 
-[node name="Box3" parent="." index="14" instance=ExtResource( 5 )]
+[node name="Box3" parent="." index="12" instance=ExtResource( 5 )]
 
 position = Vector2( 670, -100 )
 
-[node name="Box4" parent="." index="15" instance=ExtResource( 5 )]
+[node name="Box4" parent="." index="13" instance=ExtResource( 5 )]
 
 position = Vector2( 670, -160 )
 
-[node name="Box10" parent="." index="16" instance=ExtResource( 5 )]
+[node name="Box10" parent="." index="14" instance=ExtResource( 5 )]
 
 position = Vector2( 230, -600 )
 
-[node name="Box11" parent="." index="17" instance=ExtResource( 5 )]
+[node name="Box11" parent="." index="15" instance=ExtResource( 5 )]
 
 position = Vector2( 280, -600 )
 
-[node name="Box5" parent="." index="18" instance=ExtResource( 5 )]
+[node name="Box5" parent="." index="16" instance=ExtResource( 5 )]
 
 position = Vector2( 610, -160 )
 
-[node name="Box6" parent="." index="19" instance=ExtResource( 5 )]
+[node name="Box6" parent="." index="17" instance=ExtResource( 5 )]
 
 position = Vector2( 550, -160 )
 
-[node name="Box7" parent="." index="20" instance=ExtResource( 5 )]
+[node name="Box7" parent="." index="18" instance=ExtResource( 5 )]
 
 position = Vector2( 480, -160 )
 
-[node name="Box8" parent="." index="21" instance=ExtResource( 5 )]
+[node name="Box8" parent="." index="19" instance=ExtResource( 5 )]
 
 position = Vector2( 480, -100 )
 
-[node name="Box12" parent="." index="22" instance=ExtResource( 5 )]
+[node name="Box12" parent="." index="20" instance=ExtResource( 5 )]
 
 position = Vector2( 170, 550 )
 

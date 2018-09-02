@@ -4,17 +4,18 @@ extends Area2D
 # var a = 2
 # var b = "textvar"
 var Arraybodies;
-export (String, "Up", "Left", "Right","Down","LR") var direcao = "Up";
+export (String, "Up", "Left", "Right","Down","LR","RL","UD","DU") var direcao = "Up";
 export (String, "Rosa","Marrom") var type = "Rosa";
+export (int) var wait_time = 5;
 var moviment = Vector2(0,0);
 var flag = 2;
 
 
 func _ready():
 	
-	if direcao == "LR":	
+	if direcao == "LR" or direcao == "RL" or direcao == "UD" or direcao == "DU":	
 		var timer = Timer.new();
-		timer.set_wait_time(5)	
+		timer.set_wait_time(wait_time)	
 		timer.connect("timeout", self, "_timeout")
 		add_child(timer)
 		timer.start()
@@ -45,6 +46,13 @@ func _process(delta):
 			moviment = Vector2(0,2);
 		"LR" : 
 			moviment = Vector2(flag,0);
+		"RL" :
+			moviment = Vector2(-flag,0);
+		"UD" :
+			moviment = Vector2(0,-flag);
+		"DU" :
+			moviment = Vector2(0,flag);		
+		
 			
 			
 	
