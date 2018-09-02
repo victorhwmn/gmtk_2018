@@ -5,7 +5,7 @@
 [ext_resource path="res://TopLeftBound.tscn" type="PackedScene" id=3]
 [ext_resource path="res://BottomRightBound.tscn" type="PackedScene" id=4]
 
-[node name="Level" type="Node" index="0"]
+[node name="Level" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -32,7 +32,8 @@ __meta__ = {
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 513.489, 277.193 )
+position = Vector2( 505.38, 830.483 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="COMPLETED" type="Label" parent="." index="2"]
 

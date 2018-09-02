@@ -90,6 +90,7 @@ LOOT = ExtResource( 4 )
 position = Vector2( 128, -960 )
 scale = Vector2( 4, 1 )
 _sections_unfolded = [ "Transform" ]
+next_scene = "res://Level1.tscn"
 
 [node name="eNFEITES" type="Node" parent="." index="14"]
 

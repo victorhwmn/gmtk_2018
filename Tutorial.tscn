@@ -4,7 +4,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Transition.tscn" type="PackedScene" id=3]
 
-[node name="Level" type="Node"]
+[node name="Level" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -139,7 +139,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "BULLETS DO NOT DESPAWN AND YOU ONLY AVE 6 BULLETS"
+text = "BULLETS DO NOT DESPAWN AND YOU ONLY HAVE 6 BULLETS"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
