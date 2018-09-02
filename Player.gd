@@ -116,9 +116,8 @@ func _physics_process(delta):
 	pass
 
 func _input(event):
-		if event.is_action_pressed("ui_restart"):
-			int boy
-	pass
+	if event.is_action_pressed("restart"):
+			StageManager.restart()
 
 func enable_shoot():
 	can_shoot = true

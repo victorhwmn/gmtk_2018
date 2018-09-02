@@ -16,9 +16,9 @@ func _ready():
 	
 func init(direction, speed, size = 0.1, damage = 10):
 	if speed == null:
-		speed = 1000
+		speed = 750
 	if size == null:
-		size = 0.1
+		size = 0.5
 	if damage == null:
 		damage = 10
 	self.direction = direction * speed

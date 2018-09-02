@@ -53,7 +53,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 10.0
@@ -87,7 +87,7 @@ animation = "0_front"
 
 position = Vector2( 4, 48.9417 )
 scale = Vector2( 8, 8.07244 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlayerDetector" type="Area2D" parent="." index="2"]

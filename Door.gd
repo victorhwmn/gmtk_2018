@@ -2,10 +2,10 @@ extends StaticBody2D
 
 func _process(delta):
 	
-	var enemy = get_tree().get_node("Control_enemy")
+	var enemy = get_node("../Control_enemy")
 	
 	if(enemy != null):
-		enemy.get_child_count()
+		var enemies = enemy.get_child_count()
 		if(enemies == 0):
 			unlock()
 	pass

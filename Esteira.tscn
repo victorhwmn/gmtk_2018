@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.4829, 12.0946 )
+extents = Vector2( 12.5514, 12.0946 )
 
 [sub_resource type="SpriteFrames" id=2]
 
@@ -48,16 +48,16 @@ wait_time = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-position = Vector2( 0.112717, -0.0940284 )
-scale = Vector2( 5.03243, 1.66665 )
+position = Vector2( -0.254381, -0.0940284 )
+scale = Vector2( 5.05614, 1.66665 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
 
 visible = false
-position = Vector2( 29.8135, 0.0401744 )
-scale = Vector2( 0.26218, 0.156436 )
+position = Vector2( 29.7308, 0.0401744 )
+scale = Vector2( 0.261534, 0.156436 )
 frames = SubResource( 2 )
 animation = "default"
 frame = 1
@@ -67,8 +67,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="." index="2"]
 
 visible = false
-position = Vector2( -32.0145, -0.00177908 )
-scale = Vector2( 0.239336, 0.156178 )
+position = Vector2( -32.3209, -0.00177908 )
+scale = Vector2( 0.24173, 0.156178 )
 frames = SubResource( 2 )
 animation = "default"
 frame = 1
@@ -88,8 +88,8 @@ playing = true
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="." index="4"]
 
 visible = false
-position = Vector2( -32.2212, 0.0379329 )
-scale = Vector2( 0.238553, 0.156488 )
+position = Vector2( -32.5051, 0.0379329 )
+scale = Vector2( 0.240771, 0.156488 )
 frames = SubResource( 3 )
 animation = "default"
 frame = 1
