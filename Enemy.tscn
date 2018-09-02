@@ -1,14 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://inimigo45.png" type="Texture" id=2]
-[ext_resource path="res://inimigoDireita.png" type="Texture" id=3]
+[ext_resource path="res://inimigoFrente.png" type="Texture" id=3]
 [ext_resource path="res://inimigoCostas.png" type="Texture" id=4]
 [ext_resource path="res://inimigoEsquerda.png" type="Texture" id=5]
 [ext_resource path="res://inimigo-45.png" type="Texture" id=6]
-[ext_resource path="res://inimigoFrente.png" type="Texture" id=7]
+[ext_resource path="res://inimigoDireita.png" type="Texture" id=7]
+[ext_resource path="res://AmmoContainer.tscn" type="PackedScene" id=8]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -18,12 +19,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "6_right",
+"name": "0_front",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "3_back_left",
+"name": "5_back_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -33,12 +34,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "5_back_right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "4_back",
+"name": "3_back_left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -48,7 +44,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "0_front",
+"name": "6_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "4_back",
 "speed": 5.0
 } ]
 
@@ -57,7 +58,7 @@ animations = [ {
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 23.0631
@@ -68,23 +69,24 @@ radius = 23.0631
 
 position = Vector2( -1.10803, 1.10803 )
 scale = Vector2( 0.25, 0.25 )
+z_index = 1
 input_pickable = false
 collision_layer = 1
 collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "collision" ]
+_sections_unfolded = [ "Collision", "Material", "Transform", "Z Index", "collision" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 2.31558, -1.15562 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 animation = "0_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 4, 22 )
-scale = Vector2( 8, 6 )
+position = Vector2( 4, 48.9417 )
+scale = Vector2( 8, 8.07244 )
 shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
@@ -103,8 +105,13 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" index="0"]
 
-visible = false
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="AmmoContainer" parent="." index="3" instance=ExtResource( 8 )]
+
+position = Vector2( 0, 7.99998 )
+scale = Vector2( 6, 6 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
 

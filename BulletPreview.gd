@@ -22,6 +22,8 @@ func handle_collision(collision):
 	if collision.collider.is_in_group("players"):
 		shooter.playerHit()
 		queue_free()
+	elif collision.collider.is_in_group("damageable"):
+		queue_free()
 	else:
 		.handle_collision(collision)
 	pass

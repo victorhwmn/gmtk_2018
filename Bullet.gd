@@ -6,6 +6,12 @@ var size
 var damage
 
 func _ready():
+	var colors = [
+		Color(1, 0, 0, 1),
+		Color(0, 1, 0, 1),
+		Color(0, 0, 1, 1)
+	]
+	set_modulate(colors[randi()%3+1-1])
 	pass
 	
 func init(direction, speed, size = 0.1, damage = 10):
@@ -41,6 +47,7 @@ func handle_collision(collision):
 			var total_size = size + collision.collider.size
 			direction = (collision.normal*size + collision.collider.direction * collision.collider.size) / total_size * 2
 			size = total_size
+			set_modulate((get_modulate() + collision.collider.get_modulate())/2)
 			scale = Vector2(sqrt(size), sqrt(size))		
 	else:
 		direction = direction.bounce(collision.normal)
