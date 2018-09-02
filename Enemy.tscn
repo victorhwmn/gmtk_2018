@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://inimigo45.png" type="Texture" id=2]
-[ext_resource path="res://inimigoFrente.png" type="Texture" id=3]
-[ext_resource path="res://inimigoCostas.png" type="Texture" id=4]
+[ext_resource path="res://inimigoCostas.png" type="Texture" id=3]
+[ext_resource path="res://inimigoFrente.png" type="Texture" id=4]
 [ext_resource path="res://inimigoEsquerda.png" type="Texture" id=5]
 [ext_resource path="res://inimigo-45.png" type="Texture" id=6]
 [ext_resource path="res://inimigoDireita.png" type="Texture" id=7]
@@ -19,10 +19,15 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "0_front",
+"name": "4_back",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "0_front",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "5_back_right",
 "speed": 5.0
@@ -32,7 +37,7 @@ animations = [ {
 "name": "2_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "3_back_left",
 "speed": 5.0
@@ -46,11 +51,6 @@ animations = [ {
 "loop": true,
 "name": "6_right",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "4_back",
-"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
@@ -63,7 +63,7 @@ radius = 10.0
 custom_solver_bias = 0.0
 radius = 23.0631
 
-[node name="Enemy" type="KinematicBody2D" groups=[
+[node name="Enemy" type="KinematicBody2D" index="0" groups=[
 "damageable",
 ]]
 
@@ -80,8 +80,10 @@ _sections_unfolded = [ "Collision", "Material", "Transform", "Z Index", "collisi
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 2.31558, -1.15562 )
+z_index = 1
 frames = SubResource( 1 )
 animation = "0_front"
+_sections_unfolded = [ "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
