@@ -11,7 +11,7 @@
 [ext_resource path="res://BottomRightBound.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Door.tscn" type="PackedScene" id=10]
 
-[node name="Level" type="Node" index="0"]
+[node name="Level" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -94,11 +94,9 @@ next_scene = "res://Level1.tscn"
 
 [node name="eNFEITES" type="Node" parent="." index="14"]
 
-editor/display_folded = true
-
 [node name="Sprite" type="Sprite" parent="eNFEITES" index="0"]
 
-position = Vector2( -384, 160 )
+position = Vector2( -544, 288 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 
