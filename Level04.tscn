@@ -10,7 +10,7 @@
 [ext_resource path="res://Transition.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Box.tscn" type="PackedScene" id=9]
 
-[node name="Level" type="Node"]
+[node name="Level" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -40,7 +40,7 @@ __meta__ = {
 position = Vector2( 930.073, 656.391 )
 scale = Vector2( 3.74865, 0.958034 )
 direcao = "LR"
-wait_time = 3
+wait_time = 2
 
 [node name="Esteira2" parent="." index="2" instance=ExtResource( 2 )]
 
@@ -48,7 +48,7 @@ position = Vector2( 929.048, 543.711 )
 rotation = 3.14159
 scale = Vector2( 3.84477, 0.958034 )
 direcao = "RL"
-wait_time = 3
+wait_time = 2
 
 [node name="Esteira4" parent="." index="3" instance=ExtResource( 2 )]
 
@@ -116,63 +116,62 @@ position = Vector2( 903.033, -53.554 )
 
 [node name="Control_enemy" type="Node2D" parent="." index="12"]
 
-position = Vector2( 733.676, 528.269 )
-scale = Vector2( 0.25, 0.25 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Enemy" parent="Control_enemy" index="0" instance=ExtResource( 4 )]
 
-position = Vector2( -958.188, 5286.78 )
-scale = Vector2( 1, 1 )
+position = Vector2( 494.129, 1879.81 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy11" parent="Control_enemy" index="1" instance=ExtResource( 4 )]
 
-position = Vector2( 1349.95, 5340.8 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1071.16, 1893.62 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy7" parent="Control_enemy" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 2834.57, 2622.21 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1442.32, 1198.72 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy6" parent="Control_enemy" index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 1836.2, 4274.94 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1192.73, 1621.17 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy8" parent="Control_enemy" index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 2576.24, 3605.64 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1377.74, 1450.09 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy9" parent="Control_enemy" index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 999.271, 2820.72 )
-scale = Vector2( 1, 1 )
+position = Vector2( 983.494, 1249.46 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy10" parent="Control_enemy" index="6" instance=ExtResource( 4 )]
 
-position = Vector2( -747.443, 3609.73 )
-scale = Vector2( 1, 1 )
+position = Vector2( 546.815, 1451.14 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy3" parent="Control_enemy" index="7" instance=ExtResource( 4 )]
 
-position = Vector2( 1601.34, 452.331 )
-scale = Vector2( 1, 1 )
+position = Vector2( 972.726, 659.481 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy4" parent="Control_enemy" index="8" instance=ExtResource( 4 )]
 
-position = Vector2( 2938.86, -1500.03 )
-scale = Vector2( 1, 1 )
+position = Vector2( 1468.39, 145.024 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy5" parent="Control_enemy" index="9" instance=ExtResource( 4 )]
 
-position = Vector2( -1280.61, -1505.12 )
-scale = Vector2( 1, 1 )
+position = Vector2( 413.523, 143.723 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="Enemy2" parent="Control_enemy" index="10" instance=ExtResource( 4 )]
 
-position = Vector2( 0, 0 )
-scale = Vector2( 1, 1 )
+position = Vector2( 881.394, 536.154 )
+scale = Vector2( 0.25, 0.255611 )
 
 [node name="TopLeftBound" parent="." index="13" instance=ExtResource( 5 )]
 
@@ -192,7 +191,7 @@ type = "Vertical"
 
 [node name="Transition" parent="." index="16" instance=ExtResource( 8 )]
 
-position = Vector2( 1823.66, 576.935 )
+position = Vector2( 1839.98, 575.575 )
 scale = Vector2( 0.99523, 2.11462 )
 
 [node name="Box" parent="." index="17" instance=ExtResource( 9 )]

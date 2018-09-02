@@ -148,12 +148,12 @@ position = Vector2( 170, 550 )
 
 [node name="Door" parent="." index="21" instance=ExtResource( 6 )]
 
-position = Vector2( 570, 610 )
-scale = Vector2( 1.90625, 1 )
+position = Vector2( 576, 611 )
+scale = Vector2( 0.999997, 1 )
 
 [node name="Transition" parent="." index="22" instance=ExtResource( 7 )]
 
-position = Vector2( 250, -680 )
+position = Vector2( 575, 624 )
 scale = Vector2( 1.90625, 1 )
 next_scene = "res://Level04.tscn"
 
