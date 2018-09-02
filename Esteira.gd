@@ -45,9 +45,9 @@ func _process(delta):
 		"Down":
 			moviment = Vector2(0,2);
 		"LR" : 
-			moviment = Vector2(flag,0);
-		"RL" :
 			moviment = Vector2(-flag,0);
+		"RL" :
+			moviment = Vector2(flag,0);
 		"UD" :
 			moviment = Vector2(0,-flag);
 		"DU" :
