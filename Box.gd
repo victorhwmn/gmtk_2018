@@ -15,3 +15,4 @@ func destroy():
 	get_tree().get_root().get_node("Level").add_child(loot)
 	queue_free()
 	pass
+

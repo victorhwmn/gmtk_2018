@@ -22,4 +22,14 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 shape = SubResource( 1 )
 
+[node name="bounce" type="AudioStreamPlayer2D" parent="." index="1"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 

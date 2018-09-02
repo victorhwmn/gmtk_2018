@@ -138,8 +138,11 @@ func input_shoot():
 	shoot_timer.start()
 	if ammo_count > 0 and shoot_dir != Vector2(0, 0):
 		.shoot(Bullet, shoot_dir)
+		$sfx/shoot.play()
 		ammo_count-= 1
 		print("Ammo: ", ammo_count)
+	elif ammo_count == 0:
+		$sfx/empty.play()
 	pass
 	
 func shoot():
@@ -153,4 +156,5 @@ func hit(damage):
 	print(self.name, " took ", damage, " damage")
 	is_dead = true
 	visible = false
+	$sfx/dead.play()
 	pass

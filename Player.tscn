@@ -1,15 +1,18 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://brigDir.png" type="Texture" id=2]
-[ext_resource path="res://brigCostas.png" type="Texture" id=3]
-[ext_resource path="res://brigFrenteDir.png" type="Texture" id=4]
-[ext_resource path="res://brigEsq.png" type="Texture" id=5]
-[ext_resource path="res://brigCostasDir.png" type="Texture" id=6]
-[ext_resource path="res://brigCostasEsq.png" type="Texture" id=7]
-[ext_resource path="res://brigFrenteEsq.png" type="Texture" id=8]
+[ext_resource path="res://brigCostas.png" type="Texture" id=2]
+[ext_resource path="res://brigCostasDir.png" type="Texture" id=3]
+[ext_resource path="res://brigCostasEsq.png" type="Texture" id=4]
+[ext_resource path="res://brigFrenteDir.png" type="Texture" id=5]
+[ext_resource path="res://brigDir.png" type="Texture" id=6]
+[ext_resource path="res://brigFrenteEsq.png" type="Texture" id=7]
+[ext_resource path="res://brigEsq.png" type="Texture" id=8]
 [ext_resource path="res://brigFrente.png" type="Texture" id=9]
 [ext_resource path="res://brig.png" type="Texture" id=10]
+[ext_resource path="res://BengalaShoot.wav" type="AudioStream" id=11]
+[ext_resource path="res://empty.wav" type="AudioStream" id=12]
+[ext_resource path="res://ld42_gameover.wav" type="AudioStream" id=13]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -21,42 +24,37 @@ radius = 10.0
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "shoot_right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "shoot_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "shoot_downdiagright",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "shoot_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
 "name": "walk_up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "shoot_updiagright",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "shoot_updiagleft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "shoot_downdiagright",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "shoot_right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "shoot_downdiagleft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "shoot_left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -68,11 +66,16 @@ animations = [ {
 "loop": true,
 "name": "walk_down",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "shoot_up",
+"speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
-"damageable",
+[node name="Player" type="KinematicBody2D" groups=[
 "players",
+"damageable",
 ]]
 
 input_pickable = false
@@ -120,5 +123,37 @@ scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 2 )
 animation = "walk_down"
 _sections_unfolded = [ "Transform" ]
+
+[node name="sfx" type="Node" parent="." index="3"]
+
+[node name="shoot" type="AudioStreamPlayer2D" parent="sfx" index="0"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="empty" type="AudioStreamPlayer2D" parent="sfx" index="1"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="dead" type="AudioStreamPlayer2D" parent="sfx" index="2"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

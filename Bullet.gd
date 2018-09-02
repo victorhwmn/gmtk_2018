@@ -51,4 +51,5 @@ func handle_collision(collision):
 			scale = Vector2(sqrt(size), sqrt(size))		
 	else:
 		direction = direction.bounce(collision.normal)
+		$bounce.play()
 	pass

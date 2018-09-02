@@ -101,7 +101,8 @@ func hit(damage):
 	var candy = Candy.instance()
 	candy.position = position
 	get_tree().get_root().get_node("Level").add_child(candy)
+	$sfx/break.play()
+
+func _on_break_finished():
 	queue_free()
-
-
-
+	pass # replace with function body
