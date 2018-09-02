@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://TitleScreen.gd" type="Script" id=1]
+[ext_resource path="res://brigTitulo.png" type="Texture" id=2]
 
-[node name="TitleScreen" type="Control"]
+[node name="TitleScreen" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -23,20 +24,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -30.5
-margin_top = -7.0
-margin_right = 30.5
-margin_bottom = 7.0
+margin_left = -72.0
+margin_right = -1.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Title here"
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "BRIGAGUN"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Hint", "Rect", "custom_colors" ]
 
 [node name="Options" type="Control" parent="." index="1"]
 
@@ -67,11 +70,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Made By UFSCar GameDev"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_colors" ]
 
 [node name="Start" type="Label" parent="Options" index="1"]
 
@@ -89,10 +93,16 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press Any Button To Start"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="brigTitulo" type="Sprite" parent="." index="2"]
+
+position = Vector2( 510, 150 )
+texture = ExtResource( 2 )
 
 
