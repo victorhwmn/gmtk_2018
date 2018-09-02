@@ -32,7 +32,8 @@ __meta__ = {
 
 [node name="Player" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 513.489, 277.193 )
+position = Vector2( 505.38, 830.483 )
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="COMPLETED" type="Label" parent="." index="2"]
 
