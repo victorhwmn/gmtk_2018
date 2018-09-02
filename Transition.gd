@@ -7,4 +7,3 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == "Player":
 			StageManager.change_scene(next_scene)
-			#get_tree().change_scene(world_scene)
