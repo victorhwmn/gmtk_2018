@@ -4,15 +4,15 @@ var turn_delay = 2
 var shot_delay = 2
 var turn_timer = null
 var shot_timer = null
-var add_bullet_timer = null
 var Bullet = preload("res://Bullet.tscn")
 var BulletPreview = preload("res://BulletPreview.tscn")
 var Ammo = preload("res://Ammo.tscn")
+var Candy = preload("res://Candy.tscn")
 var last_preview = null
 var player_in_range = false
 var aim_rotation = 0
 
-var ammo_count = 30
+var ammo_count = 20
 var ammo = []
 
 onready var detector = get_node("PlayerDetector");
@@ -43,12 +43,11 @@ func _ready():
 	add_child(shot_lag);
 	shot_lag.start()
 
-	add_bullet_timer = Timer.new()
-	add_bullet_timer.set_wait_time(0.1)
-	add_bullet_timer.connect("timeout", self, "add_bullet")
-	add_child(add_bullet_timer)
-	add_bullet_timer.start()
-	
+	for i in range(0, ammo_count+1):
+		var new_ammo = Ammo.instance()
+		new_ammo.get_node("CollisionShape2D").apply_scale(Vector2(0.3, 0.3))
+		get_node("AmmoContainer").add_child(new_ammo)
+		ammo.append(new_ammo)
 	pass
 
 func _process(delta):
@@ -94,17 +93,11 @@ func playerHit():
 	ammo[0].queue_free()
 	ammo.erase(ammo[0])
 	pass
-	
-func add_bullet():
-	var new_ammo = Ammo.instance()
-	new_ammo.position = Vector2(randi()%5+1, 1)
-	new_ammo.scale = Vector2(0.2, 0.2)
-	get_node("AmmoContainer").add_child(new_ammo)
-	ammo.append(new_ammo)
-	if(len(ammo) > ammo_count):
-		add_bullet_timer.stop()
 
 func hit(damage):
+	var candy = Candy.instance()
+	candy.position = position
+	get_tree().get_root().get_node("Level").add_child(candy)
 	queue_free()
 
 

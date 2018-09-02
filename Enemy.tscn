@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Enemy.gd" type="Script" id=1]
 [ext_resource path="res://inimigo45.png" type="Texture" id=2]
-[ext_resource path="res://inimigoCostas.png" type="Texture" id=3]
-[ext_resource path="res://inimigoFrente.png" type="Texture" id=4]
-[ext_resource path="res://inimigoEsquerda.png" type="Texture" id=5]
-[ext_resource path="res://inimigo-45.png" type="Texture" id=6]
-[ext_resource path="res://inimigoDireita.png" type="Texture" id=7]
+[ext_resource path="res://inimigoDireita.png" type="Texture" id=3]
+[ext_resource path="res://inimigo-45.png" type="Texture" id=4]
+[ext_resource path="res://inimigoCostas.png" type="Texture" id=5]
+[ext_resource path="res://inimigoFrente.png" type="Texture" id=6]
+[ext_resource path="res://inimigoEsquerda.png" type="Texture" id=7]
 [ext_resource path="res://AmmoContainer.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -19,37 +19,37 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "4_back",
+"name": "6_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "0_front",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "5_back_right",
+"name": "1_front_left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "2_left",
+"name": "4_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "3_back_left",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "5_back_right",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "1_front_left",
+"name": "0_front",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "6_right",
+"name": "2_left",
 "speed": 5.0
 } ]
 
@@ -63,7 +63,7 @@ radius = 10.0
 custom_solver_bias = 0.0
 radius = 23.0631
 
-[node name="Enemy" type="KinematicBody2D" index="0" groups=[
+[node name="Enemy" type="KinematicBody2D" groups=[
 "damageable",
 ]]
 

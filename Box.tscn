@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Box.gd" type="Script" id=1]
-[ext_resource path="res://caixa.png" type="Texture" id=2]
+[ext_resource path="res://Candy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://caixa.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.0009, 7.54948 )
 
-[node name="Box" type="KinematicBody2D" groups=[
+[node name="Box" type="KinematicBody2D" index="0" groups=[
 "damageable",
 ]]
 
@@ -19,11 +20,12 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+LOOT = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 scale = Vector2( 0.149944, 0.149944 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

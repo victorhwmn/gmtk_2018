@@ -8,7 +8,7 @@
 [ext_resource path="res://Door.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Transition.tscn" type="PackedScene" id=7]
 
-[node name="Level1" type="Node" index="0"]
+[node name="Level" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -74,11 +74,9 @@ scale = Vector2( 3.15925, 2.03125 )
 
 [node name="Player" parent="." index="7" instance=ExtResource( 3 )]
 
-position = Vector2( 1140, -970 )
+position = Vector2( 1119.55, -904.119 )
 
 [node name="Control_enemy" type="Node2D" parent="." index="8"]
-
-editor/display_folded = true
 
 [node name="Enemy" parent="Control_enemy" index="0" instance=ExtResource( 4 )]
 
@@ -88,11 +86,15 @@ position = Vector2( 340, 100 )
 
 position = Vector2( 580, -270 )
 
-[node name="Enemy3" parent="Control_enemy" index="2" instance=ExtResource( 4 )]
+[node name="Enemy5" parent="Control_enemy" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 972, -371 )
+
+[node name="Enemy3" parent="Control_enemy" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( 350, 540 )
 
-[node name="Enemy2" parent="Control_enemy" index="3" instance=ExtResource( 4 )]
+[node name="Enemy2" parent="Control_enemy" index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 100, -490 )
 

@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://BoxWithLoot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Esteira.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 15.9149 )
 
-[node name="Scene" type="Node"]
+[node name="Level" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -127,5 +128,26 @@ position = Vector2( 162.602, 81.48 )
 [node name="Node2D" parent="." index="10" instance=ExtResource( 4 )]
 
 position = Vector2( 475.727, 280.925 )
+
+[node name="Esteira" parent="." index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 647.973, 155.691 )
+scale = Vector2( 2.26185, 3.5729 )
+direcao = "Left"
+type = "Rosa"
+
+[node name="Esteira2" parent="." index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 364.042, 155.691 )
+scale = Vector2( 2.26185, 3.5729 )
+direcao = "Left"
+type = "Rosa"
+
+[node name="Esteira3" parent="." index="13" instance=ExtResource( 5 )]
+
+position = Vector2( 76.7709, 155.691 )
+scale = Vector2( 2.26185, 3.5729 )
+direcao = "Left"
+type = "Rosa"
 
 

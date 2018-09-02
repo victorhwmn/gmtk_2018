@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://brigDir.png" type="Texture" id=2]
-[ext_resource path="res://brigCostasDir.png" type="Texture" id=3]
-[ext_resource path="res://brigFrente.png" type="Texture" id=4]
-[ext_resource path="res://brigCostas.png" type="Texture" id=5]
-[ext_resource path="res://brigEsq.png" type="Texture" id=6]
-[ext_resource path="res://brig.png" type="Texture" id=7]
-[ext_resource path="res://brigCostasEsq.png" type="Texture" id=8]
-[ext_resource path="res://brigFrenteDir.png" type="Texture" id=9]
-[ext_resource path="res://brigFrenteEsq.png" type="Texture" id=10]
+[ext_resource path="res://brigCostas.png" type="Texture" id=3]
+[ext_resource path="res://brigFrenteDir.png" type="Texture" id=4]
+[ext_resource path="res://brigEsq.png" type="Texture" id=5]
+[ext_resource path="res://brigCostasDir.png" type="Texture" id=6]
+[ext_resource path="res://brigCostasEsq.png" type="Texture" id=7]
+[ext_resource path="res://brigFrenteEsq.png" type="Texture" id=8]
+[ext_resource path="res://brigFrente.png" type="Texture" id=9]
+[ext_resource path="res://brig.png" type="Texture" id=10]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -26,53 +26,53 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "shoot_updiagright",
+"name": "shoot_up",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "shoot_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "walk_up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "shoot_left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "walk_down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "shoot_updiagleft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "shoot_downdiagright",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "shoot_up",
+"name": "shoot_left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "shoot_updiagright",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "shoot_updiagleft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "shoot_downdiagleft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "shoot_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "shoot_downdiagleft",
+"name": "walk_down",
 "speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D" index="0" groups=[
-"players",
 "damageable",
+"players",
 ]]
 
 input_pickable = false
